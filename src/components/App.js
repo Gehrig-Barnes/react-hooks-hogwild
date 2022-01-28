@@ -5,6 +5,8 @@ import Filter from "./Filter";
 
 import hogs from "../porkers_data";
 
+import HogForm from './HogForm'
+
 function App() {
 
 	const [hogData, setHogData] = useState(hogs)
@@ -50,12 +52,19 @@ function App() {
 		else setHogData(hogs)
 			
 	}
+
+
+	function handleNewHog(newHog){
+		const newHogArray = [...hogData, newHog]
+		return setHogData(newHogArray)
+	}
 	
 		return (
 			<div className="App">
 				<Nav />
 				<Filter handleFilter={handleFilter} handleSort={handleSort} handleSortByWeight={handleSortByWeight}/>
 				<TileList hogData={hogData}/>
+				<HogForm hogData={hogData} handleNewHog={handleNewHog}/>
 			</div>
 		);
 	}

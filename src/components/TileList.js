@@ -16,7 +16,7 @@ function TileList ({hogData}){
             return( 
                
                <Tile
-                    key={hog}
+                    key={hog.id}
                     name={hog.name}
                     image={hog.image}
                     specialty={hog.specialty}

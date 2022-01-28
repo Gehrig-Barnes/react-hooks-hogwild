@@ -1,8 +1,4 @@
-# HogWild: The React app for fans of prize-winning pigs
 
-## React Week 1 Project
-
-## Deliverables
 
 - _When the app first loads_, display a tile for each hog in the
   `porker_data.js` file. In the tile, display the **name** and **image** for
